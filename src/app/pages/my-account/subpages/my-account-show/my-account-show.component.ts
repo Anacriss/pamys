@@ -9,7 +9,9 @@ import { LoginService } from '../../../../core/services/auth/login/login.service
 })
 export class MyAccountShowComponent implements OnInit {
   user: Client = {};
-  constructor(private loginService: LoginService) {}
+  constructor(private loginService: LoginService) { }
+  
+  // state: boolean = false;
 
   ngOnInit(): void {
     this.cargarUser();

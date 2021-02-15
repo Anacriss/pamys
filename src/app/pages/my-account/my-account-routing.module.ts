@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 import { MyAccountShowComponent } from './subpages/my-account-show/my-account-show.component';
+import { MyAccountEditComponent } from './subpages/my-account-edit/my-account-edit.component';
 
 const routes: Routes = [
   {
@@ -27,10 +28,14 @@ const routes: Routes = [
       // },
     ],
   },
+  {
+    path: 'edit',
+    component: MyAccountEditComponent
+  }
 ];
 
-@NgModule({
-  imports: [CommonModule, RouterModule.forChild(routes)],
-  exports: [RouterModule],
-})
-export class MyAccountRoutingModule {}
+@NgModule( {
+  imports: [ CommonModule, RouterModule.forChild( routes ) ],
+  exports: [ RouterModule ],
+} )
+export class MyAccountRoutingModule { }
